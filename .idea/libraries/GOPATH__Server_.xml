@@ -18,8 +18,10 @@
       <root url="file://D:/projects/goHome/src/beeweb" />
       <root url="file://D:/projects/goHome/src/test" />
       <root url="file://D:/projects/goHome/src/drill" />
+      <root url="file://D:/projects/goHome/src/beeApiTest" />
       <root url="file://D:/projects/goHome/src/drill2" />
       <root url="file://D:/projects/goHome/src/helper" />
+      <root url="file://D:/projects/goHome/src/beeTest" />
       <root url="file://D:/projects/goHome/src/samples" />
     </CLASSES>
     <JAVADOC />
@@ -41,8 +43,10 @@
       <root url="file://D:/projects/goHome/src/beeweb" />
       <root url="file://D:/projects/goHome/src/test" />
       <root url="file://D:/projects/goHome/src/drill" />
+      <root url="file://D:/projects/goHome/src/beeApiTest" />
       <root url="file://D:/projects/goHome/src/drill2" />
       <root url="file://D:/projects/goHome/src/helper" />
+      <root url="file://D:/projects/goHome/src/beeTest" />
       <root url="file://D:/projects/goHome/src/samples" />
     </SOURCES>
     <excluded>

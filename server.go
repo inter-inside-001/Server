@@ -5,11 +5,18 @@ import (
 	"github.com/astaxie/beego"
 	"fmt"
 	"strings"
+	"log"
+	"os"
+)
+
+const(
+	LOG_DIRECTORY = "./test.log"
 )
 
 var onlineConns = make(map[string]net.Conn)// 存储客户端ip与连接的映射
 var messageQueue = make(chan string, 1000) // 消息队列
 var quitChan = make(chan bool)
+var logger *log.Logger
 
 // 处理错误
 func CheckError(err error){
@@ -20,12 +27,21 @@ func CheckError(err error){
 
 
 func main(){
+	// 开启日志
+	logFile, err := os.OpenFile(LOG_DIRECTORY, os.O_RDWR|os.O_CREATE, 0)
+	if err != nil{
+		fmt.Println("log file create failure!")
+		os.Exit(-1)
+	}
+	defer logFile.Close()
+	logger = log.New(logFile, "\r\n", log.Ldate|log.Ltime|log.Llongfile)
+
 	// 先监听接口
 	listener,err := net.Listen("tcp", "127.0.0.1:8080")
 	defer listener.Close()
 	CheckError(err)
 	fmt.Println("服务端已启动...")
-
+	logger.Println("服务端已启动")
 	go ConsumeMessage()
 
 	// 然后针对每一个请求，开启一个协程进行处理
@@ -81,7 +97,13 @@ func showCurrentUser(){
 
 // 处理客户端的请求
 func ProcessInfo(conn net.Conn){
-	defer conn.Close()
+	// 协程退出时，将当前链接从onlineConns删除掉
+	defer func(conn net.Conn){
+		addr := fmt.Sprintf("%s",conn.RemoteAddr())
+		delete(onlineConns, addr)
+		conn.Close()
+		showCurrentUser()
+	}(conn)
 
 	buf := make([]byte, 1024)
 	remoteAddr := conn.RemoteAddr()
