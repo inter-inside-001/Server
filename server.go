@@ -77,13 +77,14 @@ func doProcessMessage(message string){
 	if len(contents) > 1{
 		srcAddr := contents[0] // 源地址
 		destAddr := contents[1] // 目的地址
-		sendMessage := contents[2] // 发送信息
+		sendMessage := strings.Join(contents[2:], "#") // 发送信息
 		destAddr = strings.Trim(destAddr, " ")
 
 		if conn,ok := onlineConns[destAddr]; ok{
 			_,err := conn.Write([]byte(srcAddr + "*"+sendMessage))
 			CheckError(err)
 		}
+	}else {
 	}
 }
 
