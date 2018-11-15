@@ -1,0 +1,52 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;Server&gt;">
+    <CLASSES>
+      <root url="file://D:/projects/goHome/src/testgit" />
+      <root url="file://D:/projects/goHome/src/lbm" />
+      <root url="file://D:/projects/goHome/src/goroutine" />
+      <root url="file://D:/projects/goHome/src/demo" />
+      <root url="file://D:/projects/goHome/src/hello" />
+      <root url="file://D:/projects/goHome/src/lbmweb" />
+      <root url="file://D:/projects/goHome/src/gopkg.in" />
+      <root url="file://D:/projects/goPlugins/src/gopkg.in" />
+      <root url="file://D:/projects/goHome/src/github.com" />
+      <root url="file://D:/projects/goPlugins/src/sourcegraph.com" />
+      <root url="file://D:/projects/goHome/src/sourcegraph.com" />
+      <root url="file://D:/projects/goPlugins/src/github.com" />
+      <root url="file://D:/projects/goHome/src/mine" />
+      <root url="file://D:/projects/goHome/src/.idea" />
+      <root url="file://D:/projects/goHome/src/beeweb" />
+      <root url="file://D:/projects/goHome/src/test" />
+      <root url="file://D:/projects/goHome/src/drill" />
+      <root url="file://D:/projects/goHome/src/drill2" />
+      <root url="file://D:/projects/goHome/src/helper" />
+      <root url="file://D:/projects/goHome/src/samples" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://D:/projects/goHome/src/testgit" />
+      <root url="file://D:/projects/goHome/src/lbm" />
+      <root url="file://D:/projects/goHome/src/goroutine" />
+      <root url="file://D:/projects/goHome/src/demo" />
+      <root url="file://D:/projects/goHome/src/hello" />
+      <root url="file://D:/projects/goHome/src/lbmweb" />
+      <root url="file://D:/projects/goHome/src/gopkg.in" />
+      <root url="file://D:/projects/goPlugins/src/gopkg.in" />
+      <root url="file://D:/projects/goHome/src/github.com" />
+      <root url="file://D:/projects/goPlugins/src/sourcegraph.com" />
+      <root url="file://D:/projects/goHome/src/sourcegraph.com" />
+      <root url="file://D:/projects/goPlugins/src/github.com" />
+      <root url="file://D:/projects/goHome/src/mine" />
+      <root url="file://D:/projects/goHome/src/.idea" />
+      <root url="file://D:/projects/goHome/src/beeweb" />
+      <root url="file://D:/projects/goHome/src/test" />
+      <root url="file://D:/projects/goHome/src/drill" />
+      <root url="file://D:/projects/goHome/src/drill2" />
+      <root url="file://D:/projects/goHome/src/helper" />
+      <root url="file://D:/projects/goHome/src/samples" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
