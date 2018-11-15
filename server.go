@@ -74,7 +74,7 @@ func ConsumeMessage(){
 // 转发信息
 func doProcessMessage(message string){
 	contents := strings.Split(message, "#")
-	if len(contents) > 1{
+	if len(contents) > 2{
 		srcAddr := contents[0] // 源地址
 		destAddr := contents[1] // 目的地址
 		sendMessage := strings.Join(contents[2:], "#") // 发送信息
@@ -85,6 +85,20 @@ func doProcessMessage(message string){
 			CheckError(err)
 		}
 	}else {
+		srcAddr := contents[0] // 源地址
+		cmd := contents[1] //命令
+		if strings.ToUpper(cmd) == "LIST"{
+			var ips string = ""
+			for ip := range onlineConns{
+				ips = ips + "|" + ip
+			}
+			if conn, ok := onlineConns[srcAddr]; ok{
+				_, err := conn.Write([]byte("服务器端* 目前连接服务器的ip地址: " +ips))
+				if err != nil{
+					logger.Println(err)
+				}
+			}
+		}
 	}
 }
 
